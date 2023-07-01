@@ -1,0 +1,2 @@
+<isset name="sessionVar" value="${23}" scope = "page"/>
+${sessionVar}

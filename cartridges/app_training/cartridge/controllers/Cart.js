@@ -5,10 +5,10 @@ server.extend(module.superModule);
 
 server.append("Show", function(req, res, next) {
     var viewData = res.getViewData();
-    viewData.example = "One string";
+    viewData.example = "One string or another";
 
     res.setViewData(viewData);
-
+   // res.render("test/vartest");
     return next();
 });
 
