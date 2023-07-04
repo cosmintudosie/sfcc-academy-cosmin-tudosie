@@ -1,2 +1,3 @@
-<isset name="sessionVar" value="${23}" scope = "page"/>
-${sessionVar}
+
+<isset name="sessionVar" value="${233}" scope = "page"/>
+${pdict.sessionVar}

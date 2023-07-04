@@ -1,0 +1,7 @@
+
+<isset name="productID" value="${pdict.product}" scope="page" />
+    <div class="col-4">
+        <div class="row m-3">
+            <isinclude url="${URLUtils.url('Tile-Show', 'pid', productID, 'swatches', true, 'ratings', true, 'showQuickView', false)}" />
+        </div>
+    </div>
