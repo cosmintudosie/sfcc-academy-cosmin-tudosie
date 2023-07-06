@@ -1,0 +1,4 @@
+<ismodule template="/components/content/contentModule"
+	name="contentmodule"
+	attribute="aid"
+/>
