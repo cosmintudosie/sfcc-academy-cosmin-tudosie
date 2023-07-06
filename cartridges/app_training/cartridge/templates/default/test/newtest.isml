@@ -4,4 +4,6 @@
         <div class="row m-3">
             <isinclude url="${URLUtils.url('Tile-Show', 'pid', productID, 'swatches', true, 'ratings', true, 'showQuickView', false)}" />
         </div>
-    </div>
+         ${Resource.msg("text.alert.hello","product", null)}<br/>
+        ${Resource.msgf("text.alert.special","product", null, "Koko")}
+        </div>
