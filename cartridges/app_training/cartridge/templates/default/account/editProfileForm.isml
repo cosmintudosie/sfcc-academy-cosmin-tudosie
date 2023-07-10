@@ -1,0 +1,28 @@
+<form action="${URLUtils.url('Account-SubmitProfile')}" class="edit-profile-form" method="POST" encoding="off">
+<div class="col">
+        <label class="form-control-label" for="name">
+            <isprint value="${pdict.profileForm.name.label}" />
+        </label>
+        <input type="string" class="form-control" id="name"
+            <isprint value="${pdict.profileForm.name.attributes}" encoding="off" />
+            >
+ </div>
+<div class="col">
+        <label class="form-control-label" for="email">
+            <isprint value="${pdict.profileForm.email.label}" />
+        </label>
+        <input type="email" class="form-control" id="email"
+            <isprint value="${pdict.profileForm.email.attributes}" encoding="off" />>
+</div>
+<div class="col">
+        <label class="form-control-label" for="confirmEmail">
+            <isprint value="${pdict.profileForm.emailconfirm.label}" />
+        </label>
+        <input type="email" class="form-control" id="confirmEmail" <isprint value="${pdict.profileForm.emailconfirm.attributes}" encoding="off"/>>
+</div>
+
+<div class="col">
+            <button type="submit" name="save" class="btn btn-save btn-block btn-primary">${Resource.msg('button.save','account',null)}</button>
+        </div>
+
+</form>

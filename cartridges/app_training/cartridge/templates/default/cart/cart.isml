@@ -39,6 +39,7 @@
         </div>
         <hr class="no-margin-top">
     </div>
+<isif condition="${pdict.notes.length == 0}" > <h1>${Resource.msg('info.cart.user.nonotes','cart',null)}</h1> </isif>
 
     <isif condition="${pdict.items.length === 0}">
         <div class="container cart-empty">

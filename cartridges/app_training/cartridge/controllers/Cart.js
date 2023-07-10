@@ -8,7 +8,7 @@ server.append("Show", function(req, res, next) {
     viewData.example = "One string or another";
 
     res.setViewData(viewData);
-   // res.render("test/vartest");
+    // res.render("test/vartest");
     return next();
 });
 

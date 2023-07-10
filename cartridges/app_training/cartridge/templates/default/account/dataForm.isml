@@ -1,0 +1,6 @@
+<div>
+Your name is ${pdict.data.name}
+</div>
+<div>
+Your email adress is ${pdict.data.email}
+</div>
