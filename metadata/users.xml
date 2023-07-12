@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users xmlns="http://www.demandware.com/xml/impex/user/2007-09-05">
+    <user login="cosmin.tudosie81@yahoo.ro" enabled-flag="true">
+        <credentials>
+            <external-id>7233419c-5c51-4331-ab3b-9ac21736d844</external-id>
+        </credentials>
+        <profile>
+            <first-name>Cosmin</first-name>
+            <last-name>Tudosie</last-name>
+            <email>cosmin.tudosie81@yahoo.ro</email>
+        </profile>
+    </user>
+
+</users>
