@@ -1,0 +1,12 @@
+<div class="row product-grid">
+<isloop items="${pdict.apiProductSearch.productSearchHits}" var="product" status="loopState" end=3>
+    <div class="col-sm">
+        <isif condition = "${product.productID!==pdict.currentProductId}">
+        <isobject object="${product.productSearchHit}" view="searchhit">
+            <isinclude url="${URLUtils.url('Tile-Show', 'pid', product.productID, 'swatches', true, 'ratings', true)}" />
+        </isobject>
+        </isif>
+
+    </div>
+</isloop>
+</div>
