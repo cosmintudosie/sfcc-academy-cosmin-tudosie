@@ -1,0 +1,18 @@
+
+<h3>
+${Resource.msgf('email.title', 'mail', null)}
+</h3>
+
+<div class="image-container">
+
+   <img class="tile-image" src="${pdict.productImage}" alt="${pdict.productName}"
+             />
+
+</div>
+<div class="pdp-link">
+    ${Resource.msgf('email.message.product.name', 'mail', null)}
+    <a class="link" href="${pdict.productUrl}">${pdict.productName}</a>
+</div>  
+<div class="row">${Resource.msgf('email.message.product.description', 'mail', null)} ${pdict.productDescription}</div>
+<div class="row">${Resource.msgf('email.message.product.price', 'mail', null)} ${pdict.productCurrency} ${pdict.productPrice}</div>
+<div class="row">${Resource.msgf('email.message.product.quantity', 'mail', null)} ${pdict.productQuantity}</div>
