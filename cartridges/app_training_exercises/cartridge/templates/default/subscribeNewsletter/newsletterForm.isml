@@ -1,0 +1,61 @@
+<form
+    action="${URLUtils.url('Newsletter-Submit')}"
+    class="registration"
+    method="POST"
+    >
+ <iscomment> <isprint value="${pdict.newsletterForm.attributes}" encoding="off" /> </iscomment>
+
+    <div class="form-group">
+        <label class="form-control-label" for="email">
+             ${Resource.msg('label.input.email.profile', 'forms', null)}
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="email"
+           data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            <isprint value=${pdict.newsletterForm.email.attributes} encoding="off" />
+            />
+        <div class="invalid-feedback" id="form-email-error"></div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="form-control-label" for="firstname">
+            ${Resource.msg('label.input.firstname.profile', 'forms', null)}
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="firstname"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-fname-error"
+            <isprint value=${pdict.newsletterForm.firstname.attributes} encoding="off" />/>
+        <div class="invalid-feedback" id="form-fname-error"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition="${!!pdict.profileForm.customer.lastname.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="lastname">
+            ${Resource.msg('label.input.lastname.profile', 'forms', null)}
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="lastname"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-lname-error"
+            <isprint value=${pdict.newsletterForm.lastname.attributes} encoding="off" />/>
+        <div class="invalid-feedback" id="form-lname-error"></div>
+    </div>
+
+   
+
+
+    <button type="submit" class="btn btn-block btn-primary">
+        ${Resource.msg('button.form.save', 'newsletter', null)}
+    </button>
+
+</form>
