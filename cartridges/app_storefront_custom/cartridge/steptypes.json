@@ -1,0 +1,39 @@
+{
+    "@type-id": "custom.TestJob",
+    "@supports-parallel-execution": "false",
+    "@supports-site-context": "true",
+    "@supports-organization-context": "false",
+    "module": "cartridges/app_storefront_custom/cartridge/scripts/job/TestJobModule.js",
+    "function": "execute",
+    "transactional": "true",
+    "parameters": {
+        "parameter": [
+            {
+                "@name": "firstParam",
+                "@type": "string",
+                "@required": "true"
+            },
+            {
+                "@name": "secondParam",
+                "@type": "string",
+                "@required": "true"
+            },
+            {
+                "@name": "thirdParam",
+                "@type": "string",
+                "@required": "true"
+            }
+        ]
+    },
+
+    "status-codes": {
+        "status": [
+            {
+                "@code": "ERROR"
+            },
+            {
+                "@code": "OK"
+            }
+        ]
+    }
+}

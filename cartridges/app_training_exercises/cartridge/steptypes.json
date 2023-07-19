@@ -1,0 +1,34 @@
+{
+    "@type-id": "custom.CategoryAssign",
+    "@supports-parallel-execution": "false",
+    "@supports-site-context": "true",
+    "@supports-organization-context": "false",
+    "module": "cartridges/app_training_exercises/cartridge/scripts/job/categoryAssign.js",
+    "function": "execute",
+    "transactional": "true",
+    "parameters": {
+        "parameter": [
+            {
+                "@name": "brand",
+                "@type": "string",
+                "@required": "true"
+            },
+            {
+                "@name": "category",
+                "@type": "string",
+                "@required": "true"
+            }
+        ]
+    },
+
+    "status-codes": {
+        "status": [
+            {
+                "@code": "ERROR"
+            },
+            {
+                "@code": "OK"
+            }
+        ]
+    }
+}
