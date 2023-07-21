@@ -1,0 +1,13 @@
+${pdict.photosURL}
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/js/productTile.js');
+        assets.addCss('/css/homePage.css');
+    </isscript>
+
+    <isloop items="${pdict.photosURL}" var="photo">
+        <img src="${photo}" style="margin: 2rem" />
+    </isloop>
+
+</isdecorate>
