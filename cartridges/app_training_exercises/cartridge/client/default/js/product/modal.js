@@ -1,8 +1,4 @@
 "use strict";
-
-/**
- * Renders a modal window
- */
 var formValidation = require("../components/formValidation");
 var createErrorNotification = require("../components/errorNotification");
 
@@ -43,31 +39,3 @@ module.exports = {
     }
 };
 
-// const modalShow = () => {
-//     var URLUtils = require("dw/web/URLUtils");
-//     $(document).on("click", ".mymodal-button", function(e) {
-//         $(".my-exercise-modal").modal("hide");
-//     });
-
-//     $(".").on("click", function(e) {
-//         $.ajax({
-//             url: $(".showModal").attr("data-modal-url"),
-//             method: "GET",
-//             success: function(data) {
-//                 var $html = $(`
-//                     <div class="modal fade my-exercise-modal" id="myModal" role="dialog">
-//                         ${data}
-//                     </div>
-//                 `);
-
-//                 $html.modal();
-//             },
-//             error: function(err) {
-//                 console.log(err);
-//             }
-//         });
-//     });
-// };
-// module.exports = () => {
-//     modalShow();
-// };
