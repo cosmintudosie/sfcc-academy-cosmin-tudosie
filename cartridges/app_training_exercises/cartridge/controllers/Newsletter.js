@@ -1,8 +1,8 @@
 "use strict";
+var server = require("server");
 var URLUtils = require("dw/web/URLUtils");
 
 var Resource = require("dw/web/Resource");
-var server = require("server");
 function getModel(req) {
     var OrderMgr = require("dw/order/OrderMgr");
     var Order = require("dw/order/Order");
