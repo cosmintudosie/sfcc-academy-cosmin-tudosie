@@ -10,14 +10,12 @@ function getModel(req) {
     var AddressModel = require("*/cartridge/models/address");
     var OrderModel = require("*/cartridge/models/order");
     var Locale = require("dw/util/Locale");
-
     var orderModel;
     var preferredAddressModel;
 
     if (!req.currentCustomer.profile) {
         return null;
     }
-
     var customerNo = req.currentCustomer.profile.customerNo;
     var customerOrders = OrderMgr.searchOrders(
         "customerNo={0} AND status!={1}",
@@ -25,27 +23,21 @@ function getModel(req) {
         customerNo,
         Order.ORDER_STATUS_REPLACED
     );
-
     var order = customerOrders.first();
-
     if (order) {
         var currentLocale = Locale.getLocale(req.locale.id);
-
         var config = {
             numberOfLineItems: "single"
         };
-
         orderModel = new OrderModel(order, { config: config, countryCode: currentLocale.country });
     } else {
         orderModel = null;
     }
-
     if (req.currentCustomer.addressBook.preferredAddress) {
         preferredAddressModel = new AddressModel(req.currentCustomer.addressBook.preferredAddress);
     } else {
         preferredAddressModel = null;
     }
-
     return new AccountModel(req.currentCustomer, preferredAddressModel, orderModel);
 }
 
@@ -64,16 +56,9 @@ server.get("NewsletterForm", function(req, res, next) {
 });
 
 server.post("Submit", function(req, res, next) {
-    //var profileForm = server.forms.getForm("newsletter");
-    var collections = require("*/cartridge/scripts/util/collections");
-
     var newsletterForm = req.form;
-
     res.json({ newsletterForm: newsletterForm });
-
     next();
-
-    ///////////////////
 });
 server.get("Subscript", function(req, res, next) {
     var Transaction = require("dw/system/Transaction");
@@ -87,9 +72,7 @@ server.get("Subscript", function(req, res, next) {
     var email = req.querystring.email;
     var firstname = req.querystring.fname;
     var lastname = req.querystring.lname;
-
     var fullName = firstname + " " + lastname;
-
     var newsletter = CustomObjectMgr.getCustomObject("NewsletterSubscription", email);
     var coupon = CouponMgr.getCoupon("$20 bonus");
     var couponCode;
@@ -129,9 +112,7 @@ server.get("Subscript", function(req, res, next) {
         var template = "subscribeNewsletter/newsletterMail";
         emailHelpers.sendEmail(emailObj, template, objectForEmail);
     }
-
     res.render("home/homePage");
-
     next();
 });
 module.exports = server.exports();
