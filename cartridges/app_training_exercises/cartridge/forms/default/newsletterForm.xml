@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19" secure="false">
+
+		<field
+			formid="email" 
+            binding="email"
+			label="label.input.email.profile" 
+			mandatory="true" 
+			max-length="50" 
+			missing-error="error.message.required.newsletter"
+			range-error="error.message.50orless.newsletter"
+			type="string"/> 
+
+        <field 
+			formid="firstname" 
+            binding="firstname"
+			label="label.input.firstname.profile" 
+			mandatory="true"
+			max-length="50"
+			missing-error="error.message.required.newsletter" 
+			range-error="error.message.50orless.newsletter" 
+			type="string" />
+
+		<field 
+			formid="lastname" 
+            binding="lastname" 
+			label="label.input.lastname.profile" 
+			mandatory="true"
+			max-length="50" 
+			missing-error="error.message.required.newsletter"
+			range-error="error.message.50orless.newsletter" 
+			type="string" />
+
+    <!-- <action formid="saveForNewsletter" valid-form="true"/> -->
+
+</form>

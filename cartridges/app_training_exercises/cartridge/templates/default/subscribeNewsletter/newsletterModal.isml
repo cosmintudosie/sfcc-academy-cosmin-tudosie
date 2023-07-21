@@ -1,0 +1,21 @@
+<div class="modal fade" id="newsletterModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">${Resource.msg('heading.newsletterConfirmation', 'newsletter', null)}</h2>
+                <button type="button" class="close newsletter-cancel-btn" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                ${Resource.msg('body.newsletterConfirmation', 'newsletter', null)}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary newsletter-cancel-btn"
+                    data-dismiss="modal">${Resource.msg('button.cancel', 'newsletter', null)}</button>
+                <button type="button" class="btn btn-primary newsletter-confirmation-btn" data-dismiss="modal">
+                    ${Resource.msg('button.yes', 'newsletter', null)}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
